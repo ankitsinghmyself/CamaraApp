@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <FrameLayout tools:context=".App_gallery"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/skyblue"
+        android:id="@+id/head">
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="@string/appName" android:layout_gravity="center|start"/>
+
+    <ImageButton android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/menu" android:layout_gravity="center|end" android:tint="@color/white" android:src="@drawable/ic_action_menu" android:background="@android:color/transparent" android:layout_marginRight="10dp" android:layout_marginEnd="10dp"/>
+
+</androidx.cardview.widget.CardView>
+
+
+    <com.example.RegistrationPage.utils.AutoFitRecyclerView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/folderRecycler"
+        android:background="@color/white"
+        android:layout_below="@id/head"
+        android:clipToPadding="false"
+        android:columnWidth="@dimen/folder_column_width">
+
+    <!--app:fastScrollEnabled="true" app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable" app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable" app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable" app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"-->
+
+
+</com.example.RegistrationPage.utils.AutoFitRecyclerView>
+
+</RelativeLayout>
+
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/empty"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="@string/empty"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/capture_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center | bottom"
+        android:text="Capture Image" />
+</FrameLayout>

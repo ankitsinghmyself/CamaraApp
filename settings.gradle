@@ -1,0 +1,2 @@
+include ':app', ':androidsdk-release'
+rootProject.name='My Application'
